@@ -134,6 +134,9 @@
                 </HorizontalStackLayout>
             </Frame>
             <VerticalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <DatePicker Format="yyyy"/>
+                </HorizontalStackLayout>
 
             </VerticalStackLayout>
         </VerticalStackLayout>
