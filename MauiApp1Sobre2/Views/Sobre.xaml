@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1Sobre2.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Plum">
+
+    <ScrollView>
+        <VerticalStackLayout
+         Padding="10,0"
+         Spacing="8">
+            <Image
+             Source="foto.png"
+             HeightRequest="285"
+             Aspect="AspectFit"
+             SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Frame BackgroundColor="Purple">
+                
+            <VerticalStackLayout VerticalOptions="Center">
+
+                <Label  Text="Helem Necesia"
+                     FontFamily="PTSansBold"
+                     FontSize="25"
+                     TextColor="White"
+                     HorizontalTextAlignment="Center"
+                   BackgroundColor="Purple"/>
+            </VerticalStackLayout>
+            </Frame>
+
+
+            <VerticalStackLayout>
+                <Label Text="Desenvolvedora Web"
+                       FontFamily="PTSansItalic"
+                       FontSize="20"
+                       TextColor="White"
+                       BackgroundColor="Purple"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Cursando o segundo módulo em Análise e Desenvolvimento de Sistemas pela ETEC."
+                       TextColor="Purple"
+                       FontFamily="PTSansItalic"
+                       FontSize="15"
+                       BackgroundColor="Pink"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Por que este curso?"
+                       FontFamily="PTSansItalic"
+                       FontSize="20"
+                       TextColor="White"
+                       BackgroundColor="Purple"/>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Grid RowDefinitions="Auto" ColumnDefinitions="*, *, *, *"/>
+                    <Label Text="Transição de Carreira"
+                           TextColor="Purple"
+                           FontFamily="PTSansItalic"
+                           FontSize="15"
+                           BackgroundColor="Pink"
+                           Grid.Row="0" Grid.Column="0"/>
+                    <Frame Margin="2"/>
+
+                    <Label Text="Rentabilidade"
+                           TextColor="Purple"
+                           FontFamily="PTSansItalic"
+                           FontSize="15"
+                           BackgroundColor="RosyBrown"
+                           Grid.Row="0" Grid.Column="1"/>
+
+                    <Frame Margin="2"/>
+
+                    <Label Text="Autonomia"
+                           TextColor="Purple"
+                           FontFamily="PTSansItalic"
+                           FontSize="15"
+                           BackgroundColor="Pink"
+                           Grid.Row="0" Grid.Column="2"/>
+
+                    <Frame Margin="2"/>
+
+                    <Label Text="Sonho"
+                           TextColor="Purple"
+                           FontFamily="PTSansItalic"
+                           FontSize="15"
+                           BackgroundColor="RosyBrown"
+                           Grid.Row="0" Grid.Column="1"/>
+                    <Frame Padding="10"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+            <Label Text="Porcentagem de Satisfação?"
+                   FontFamily="PTSansItalic"
+                   FontSize="20"
+                   TextColor="White"
+                   BackgroundColor="Purple"/>
+
+            <Frame BackgroundColor="Bisque">
+
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Satisfeito"
+                           TextColor="Purple"/>
+
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_satisfeito}"/>
+
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                     x:Name="stp_satisfeito"
+
+                     Minimum="0"
+                     Maximum="100"
+                     Increment="1"/>
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                       Text="Insatisfeito"
+                       TextColor="Purple"/>
+                    
+                    <Label Grid.Row="0" Grid.Column="1"
+                       Text="{Binding Value}"
+                       BindingContext="{x:Reference stp_insatisfeito}"/>
+
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+          x:Name="stp_insatisfeito"
+          Minimum="0"
+          Maximum="100"
+          Increment="1"/>
+                </HorizontalStackLayout>
+            </Frame>
+            <VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
